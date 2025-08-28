@@ -1,0 +1,8 @@
+# .jsonをすべて除外する
+*.json
+
+# .txtをすべて除外する
+*.txt
+
+# node_modulesディレクトリの中をすべて除外する
+node_modules/
