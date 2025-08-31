@@ -1,6 +1,8 @@
-const { loungeAnswer,resetAnsers, trueFlag, changeFlag} = require('../js/lounge.js');
 const { SlashCommandBuilder } = require('discord.js');
+const { loungeAnswer,resetAnsers, changeFlag} = require('../js/lounge.js');
+
 const wait = require('util').promisify(setTimeout);
+
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('reqest')
@@ -17,8 +19,8 @@ module.exports = {
 			await interaction.reply('一人以下ではできぬぞ t_t');
 			return;
 		}
-		await changeFlag(true);
-		await resetAnsers();
+		changeFlag(true);
+		resetAnsers();
 		await interaction.reply('受付を開始したのじゃ！');
 		for (let i = 0; i < 15*60*10; i++) {
 			if (loungeAnswer.length == member) {

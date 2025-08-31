@@ -1,6 +1,6 @@
 let { loungeAnswer,resetAnsers,changeFlag} = require('../js/lounge.js');
 const { SlashCommandBuilder } = require('discord.js');
-const wait = require('util').promisify(setTimeout);
+
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('check')

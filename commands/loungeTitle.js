@@ -1,6 +1,6 @@
-const {titels} = require('../js/lounge.js');
 const { SlashCommandBuilder } = require('discord.js');
-const wait = require('util').promisify(setTimeout);
+const {titels} = require('../js/lounge.js');
+
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('title')

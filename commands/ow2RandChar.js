@@ -1,9 +1,11 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { tankIndex, damageIndex, supportIndex, charIndex } = require('../js/ow2CharList.js');
+
 let len;
 let randomIndex;
 let key;
 const wait = require('util').promisify(setTimeout);
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('randcharow2')
